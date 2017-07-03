@@ -1,0 +1,125 @@
+---
+name: Paymentwall
+
+highlighter: rouge
+
+timezone: America/Los_Angeles
+
+# Google services
+google_analytics: UA-99753280-1
+
+defaults:
+  - scope:
+      path: apis
+      type: pages
+    values:
+      layout: apis
+      sectionid: apireference
+  - scope:
+      path: apicode-js
+      type: apicode-js
+    values:
+      sectionid: js
+  - scope:
+      path: apicode-java
+      type: apicode-java
+    values:
+      sectionid: java
+  - scope:
+      path: apicode-php
+      type: apicode-php
+    values:
+      sectionid: php
+  - scope:
+      path: apicode-dotnet
+      type: apicode-dotnet
+    values:
+      sectionid: dotnet
+  - scope:
+      path: apicode-ruby
+      type: apicode-ruby
+    values:
+      sectionid: ruby
+  - scope:
+      path: apicode-python
+      type: apicode-python
+    values:
+      sectionid: python
+  - scope:
+      path: apicode-curl
+      type: apicode-curl
+    values:
+      sectionid: curl
+  - scope:
+      path: apicontent
+      type: apicontent
+    values:
+      sectionid: apicontents
+  - scope:
+      path: docs
+      type: pages
+    values:
+      layout: docs
+      sectionid: docs
+  - scope: 
+      path: docscode-php
+      type: docscode-php
+    values:
+      sectionid: php
+  - scope: 
+      path: docscode-java
+      type: docscode-java
+    values:
+      sectionid: java
+  - scope: 
+      path: docscode-ruby
+      type: docscode-ruby
+    values:
+      sectionid: ruby
+  - scope: 
+      path: docscode-js
+      type: docscode-js
+    values:
+      sectionid: js
+  - scope: 
+      path: docscode-python
+      type: docscode-python
+    values:
+      sectionid: python
+  - scope: 
+      path: docscode-dotnet
+      type: docscode-dotnet
+    values:
+      sectionid: dotnet
+  - scope: 
+      path: docscode-curl
+      type: docscode-curl
+    values:
+      sectionid: curl
+  - scope:
+      path: modules
+      type: pages
+    values:
+      layout: docs-modules
+      sectionid: docs-modules
+      
+collections:
+  - apicode-ruby
+  - apicode-js
+  - apicode-java
+  - apicode-php
+  - apicontent
+  - apicode-dotnet
+  - apicode-python
+  - apicode-curl
+  - docscode-php
+  - docscode-js
+  - docscode-java
+  - docscode-ruby
+  - docscode-dotnet
+  - docscode-python
+  - docscode-curl
+
+exclude:
+  - .gitignore
+  - README.md

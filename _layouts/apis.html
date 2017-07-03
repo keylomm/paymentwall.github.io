@@ -1,0 +1,167 @@
+---
+sectionid: apireference
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us">
+
+{% include apis-head.html %}
+
+<body>
+    {% include svg.html %}
+    {% include apis-header.html %}
+    <section class="page-section page-section--api page-section--light js-main-content">
+        <div class="row">
+            {% include apis-navigation.html %}
+            <div class="col-md-10 col-xs-12 api-ref-content">
+                {% for section in site.data.apis-nav %}
+                {% for item in section.items %}
+                {% assign sectionID = item.name %}
+                <section class="article" id="{{ item.name }}" name = "{{ item.name }}">
+                    <div class="reference-col reference-col--content">
+                        {% for body in site.apicontent %}
+                        {% if body.category == sectionID %}
+                        {{ body.content }}
+                        {% break %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="reference-col reference-col--code">
+                        <div class="reference-col__tab js-lang-php is-active">
+                            {% for code in site.apicode-php %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-js">
+                            {% for code in site.apicode-js %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-java">
+                            {% for code in site.apicode-java %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-ruby">
+                            {% for code in site.apicode-ruby %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-python">
+                            {% for code in site.apicode-python %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-dotnet">
+                            {% for code in site.apicode-dotnet %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-curl">
+                            {% for code in site.apicode-curl %}
+                            {% if code.category == sectionID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+                {% if item.subitems %}
+                {% for subitem in item.subitems %}
+                {% assign sectionSubitemID = subitem.name %}
+                <section class="article leaf" id="{{ subitem.name }}" name = "{{ subitem.name }}">
+                    <div class="reference-col reference-col--content">
+                        {% for body in site.apicontent %}
+                        {% if body.category == sectionSubitemID %}
+                        {{ body.content }}
+                        {% break %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="reference-col reference-col--code">
+                        <div class="reference-col__tab js-lang-php is-active">
+                            {% for code in site.apicode-php %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-js">
+                            {% for code in site.apicode-js %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-java">
+                            {% for code in site.apicode-java %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-ruby">
+                            {% for code in site.apicode-ruby %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-python">
+                            {% for code in site.apicode-python %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-dotnet">
+                            {% for code in site.apicode-dotnet %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="reference-col__tab js-lang-curl">
+                            {% for code in site.apicode-curl %}
+                            {% if code.category == sectionSubitemID %}
+                            {{ code.content }}
+                            {% break %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

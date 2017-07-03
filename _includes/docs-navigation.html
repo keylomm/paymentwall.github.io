@@ -1,0 +1,57 @@
+<div class="sidebar-holder">
+    <div id="docs-nav">
+        {% for section in site.data.docs-nav %}
+        <div class="section-sidebar" id="{{ section.title }}">
+            <a class="docs-nav-list-link section-sidebar-title js-expand-maintitle-trigger" id="{{ section.id }}"
+            {% if section.href %}
+            href="{{ section.href }}"
+            {% elsif section.path %}
+            path="{{ section.path }}"
+            {% endif %}
+            >{{ section.title }}</a>
+            {% if section.items %}
+            <ul class="docs-nav-list">
+                {% for item in section.items %}
+                <li>
+                    <a class="docs-nav-list-link js-expand-subtitle-trigger item" id="{{ item.id }}"
+                       {% if item.path %}
+                       path = "{{ item.path }}"
+                       {% endif %}
+                    >{{ item.title }}</a>
+                    {% if item.subitems %}
+                    <ul class="docs-nav-subtitle-list">
+                        {% for subitem in item.subitems %}
+                        <li>
+                            <a class="docs-nav-list-link subitem" id="{{ subitem.id }}"
+                               {% if subitem.path %}
+                               path = "{{ subitem.path }}"
+                               {% endif %}
+                            >{{ subitem.title }}</a>
+                            {% if subitem.leaves %}
+                            <ul class="docs-nav-leaves-list">
+                                {% for leaf in subitem.leaves %}
+                                <li>
+                                    <a class="docs-nav-list-link leaf" id="{{ leaf.id }}"
+                                       {% if leaf.path %}
+                                       path = "{{ leaf.path }}"
+                                       {% endif %}
+                                    >{{ leaf.title }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <div class="section-sidebar" id="section-icon">
+            <a href="javascript:void(0);" style="font-size: 15px; color: #000;" class="icon">&#9776;</a>
+        </div>
+    </div>
+</div>

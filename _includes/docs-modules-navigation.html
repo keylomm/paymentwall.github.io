@@ -1,0 +1,16 @@
+<div class="sidebar-holder">
+	<div id="modules-nav">
+		<div class="modules-divide">
+			<a class="back-to-doc-home" href="/">Back to home</a>
+			<hr>
+		</div>
+		{% for section in site.data.modules-nav %}
+		<div class="modules-section-sidebar">
+			<a class="modules-section-sidebar-title docs-nav-list-link" id="{{ section.id }}" path="{{ section.path }}">{{ section.title }}</a>
+		</div>
+		{% endfor %}
+		<div class="modules-section-sidebar" id="section-icon">
+			<a href="javascript:void(0);" style="font-size: 15px; color: #000;" class="icon">&#9776;</a>
+		</div>
+	</div>
+</div>

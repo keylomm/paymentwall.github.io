@@ -1,0 +1,108 @@
+- title: API REFERENCE
+  items:
+    - name: section-head
+      title: Introduction
+- title: PAYLET
+  items:
+    - name: section-paylet-stored
+      title: Stored product
+      subitems:
+        - name: section-paylet-stored-dg
+          title: Digital Goods
+        - name: section-paylet-stored-vc
+          title: Virtual Currency
+    - name: section-paylet-custom
+      title: Custom price
+      subitems:
+        - name: section-paylet-custom-onetime
+          title: Onetime
+        - name: section-paylet-custom-subscription
+          title: Subscription
+        - name: section-paylet-custom-server_side
+          title: Server-side
+    - name: section-paylet-optional-parameter
+      title: Optional Parameter
+    - name: section-paylet-invoice
+      title: Invoice
+      subitems:
+        - name: section-paylet-invoice-contacts
+          title: Contacts
+        - name: section-paylet-invoice-items
+          title: Items
+        - name: section-paylet-invoice-tax_invoice
+          title: Invoice tax/discount
+        - name: section-paylet-invoice-tax_item
+          title: Iteam tax/discount
+        - name: section-paylet-invoice-response
+          title: Response attributes
+- title: BRICK
+  items:
+    - name: section-brick-onetime_token
+      title: Onetime token
+      subitems:
+        - name: section-brick-onetime_token-object
+          title: The onetime token object
+    - name: section-brick-charge
+      title: Charge
+      subitems:
+        - name: section-brick-charge-object
+          title: The charge object
+        - name: section-brick-charge-get
+          title: Obtain charge details
+        - name: section-brick-charge-refund
+          title: Refund a charge
+        - name: section-brick-charge-capture
+          title: Capture a charge
+        - name: section-brick-charge-void
+          title: Void a charge
+    - name: section-brick-subscription
+      title: Subscription
+      subitems:
+        - name: section-brick-subscription-object
+          title: The subscription object
+        - name: section-brick-subscription-get
+          title: Obtain subscription details
+        - name: section-brick-subscription-cancel
+          title: Cancel a subscription
+- title: MOBIAMO
+  items:
+    - name: section-mobiamo-pricepoint
+      title: Pricepoint
+    - name: section-mobiamo-pinless
+      title: Pinless
+- title: MINT
+  items:
+    - name: section-mint-generate
+      title: Generate ePIN
+    - name: section-mint-balance
+      title: Get ePIN balance
+    - name: section-mint-redemption
+      title: MINT redemption
+- title: TOOLS
+  items:
+    - name: section-tools-cancellation
+      title: Cancellation
+    - name: section-tools-coupon
+      title: Coupon
+      subitems:
+        - name: section-tools-coupon-create
+          title: Create a coupon
+        - name: section-tools-coupon-info
+          title: Retrieve coupon info
+    - name: section-tools-delivery-confirmation
+      title: Delivery confirmation
+      subitems:
+        - name: section-tools-delivery-confirmation-digital
+          title: Digital
+        - name: section-tools-delivery-confirmation-physical
+          title: Physical
+        - name: section-tools-delivery-confirmation-status
+          title: Status
+    - name: section-tools-payment-status
+      title: Payment status
+    - name: section-tools-payment-systems
+      title: Payment systems
+    - name: section-tools-product-details
+      title: Product details
+- items:
+    - name: section-footer

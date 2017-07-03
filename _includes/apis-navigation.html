@@ -1,0 +1,25 @@
+<div class="col-xs-12 col-md-2 sidebar-holder">
+	<div id="api_nav">
+	{% for section in site.data.apis-nav %}
+	<section class="section-sidebar" name="{{ section.title }}" >
+		<p class="section-sidebar__title">{{ section.title }}</p>
+		<ul class="nav-list">
+			{% for item in section.items %}
+			<li>
+				<a class="nav-list-link js-expand-trigger" name="{{ item.name }}" href="#{{ item.name }}"> {{ item.title }}</a>
+				{% if item.subitems %}
+				<ul>
+					{% for subitem in item.subitems %}
+					<li>
+						<a class="nav-list-link leaf" name="{{ subitem.name }}" href="#{{ subitem.name }}">{{ subitem.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</li>
+			{% endfor %}	
+		</ul>
+	</section>
+	{% endfor %}
+	</div>
+</div>
